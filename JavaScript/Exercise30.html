@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 30</title>
+        <style>
+            *{
+                background: coral;
+                font-size: 30px;
+                text-align: center;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div id="inner">
+                
+                
+                    <label><b><u>Guess The Number</u></b></label><br>
+                    <p id="text1">Enter a number</p>
+                    <div id="sub">
+                        <input id="number">
+                        <button id="guess" onclick="guessTheNumber()">Result</button>
+                </div>
+                <p id="text">  </p>
+                
+        </div>
+        <script>
+            var no=document.getElementById("guess");
+            var otext=document.getElementById("text");
+            var randomNo=Math.ceil(Math.random()*10);
+            function guessTheNumber(){
+                var inp=document.getElementById("number").value;
+                
+                if(inp==randomNo){
+                    
+                    otext.innerHTML=" Congratulations!! You are correct. The number was " +randomNo;
+                    otext.style.color="red";
+                    
+                }
+                else if(inp>randomNo){
+                    
+                    otext.innerHTML="Too high";
+                    
+                    
+                }
+                else{
+                    
+                    otext.innerHTML="Too low";
+                    
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

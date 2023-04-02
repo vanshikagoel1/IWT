@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 24</title>
+        
+    </head>
+
+    <body> 
+
+        <script>
+            function convert(){
+                input = parseInt(document.forms[0].elements[0].value);
+                ipTemp = document.forms[0].elements[1].value;
+                opTemp = document.forms[0].elements[3].value;
+
+                if(ipTemp == "C" && opTemp == "K"){
+                    output = input+273;
+                }
+                
+                else if(ipTemp=="C" && opTemp=="F"){
+                    output = input*(9/5)+32;
+                }
+
+                else if(ipTemp=="F" && opTemp=="C"){
+                    output = (5*(input-32))/9;
+                }
+
+                else if(ipTemp=="F" && opTemp=="K"){
+                    output = (5*(input-32))/9+273;
+                }
+
+                else if(ipTemp=="K" && opTemp=="C"){
+                    output = input+273;
+                }
+
+                else if(ipTemp=="K" && opTemp=="F"){
+                    output = (input-273)*9/5+32;
+                }
+                else{
+                    output=input;
+                }
+                document.forms[0].elements[2].value = output;
+
+            }
+        </script>
+
+        <form>
+        <input type="text" name="input" placeholder="Enter the Temperature" onclick="convert()">
+        <select name="ipTemp" onclick="convert()">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        <br><br>
+
+        
+        <input type="text" name="output">
+        <select name="opTemp" onclick="convert()">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        <br>
+        <br>
+        
+    </form>
+
+    <!-- <button onclick = 'convert()'>
+        Submit
+    </button> -->
+
+        
+    </body>
+</html>

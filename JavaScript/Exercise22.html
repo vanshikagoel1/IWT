@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <title>Question 22</title>
+        <style>
+            .inner1{
+                height: 150px;
+                width: 150px;
+                background-color: black;
+            }
+
+            .inner2{
+                height: 150px;
+                width: 150px;
+                background-color: white;
+            }
+
+            .container{
+                display: flex;
+            }
+
+            .inner1:hover, .inner2:hover{
+                background-color: red;
+                font-size: x-large;
+            }
+        </style>
+    </Head>
+
+    <body>
+        
+        <script type="text/javascript">
+            r = parseFloat(prompt("Enter the number of rows"))
+            c = parseFloat(prompt("Enter the number of columns"))
+            for(i=0;i<r;i++){
+                document.write("<div class='container'>");
+                for(j=0;j<c;j++){
+                    if((i+j)%2==0){
+                        document.write("<div class='inner1'>"+i+" "+j+"</div>");
+                    }
+                    else{
+                        document.write("<div class='inner2'>"+i+" "+j+"</div>");
+                    }
+                }
+                document.write("</div>");
+            }
+        </script>
+
+    </body>
+</html>

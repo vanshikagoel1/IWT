@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 27</title>
+    </head>
+
+    <body>
+        <h1>Time</h1>
+
+        <div id='clock'></div>
+
+        <script type="text/javascript">
+            function clock(){
+                d=new Date();
+                hh = d.getHours();
+                mm = d.getMinutes();
+                ss = d.getSeconds();
+                if(ss<10){
+                    cTime = hh + ":" + mm + ":" + '0'+ ss;
+                }
+
+                else{
+                    cTime = hh + ":" + mm + ":" + ss;
+                }
+                
+                if(hh<10){
+                    cTime ='0'+ hh + ":" + mm + ":" +ss;
+                }
+
+                else{
+                    cTime = hh + ":" + mm + ":" + ss;
+                }
+                
+                block = document.getElementById('clock');
+                block.innerHTML = cTime;
+            }
+
+            setInterval(clock, 1000);
+
+
+        </script>
+    </body>
+</html>
