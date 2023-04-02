@@ -1,0 +1,25 @@
+body{
+	background-color:rgba(198,24,30,0.5);
+	background-image:radial-gradient(rgba(252,250,24,0.3),rgba(52,222,24,0.5),rgba(25,25,150,0.5)),url("images/9.jpg");
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:bottom;
+	}
+h1{
+	font-weight:bolder;
+	font-size:30px;
+	color:rgb(255,25,245);
+	}
+p   {
+	font-size:15px;
+	color:rgb(90,25,190);
+	line-height:50px;
+	}
+span{
+	background-color:yellow;
+	}
+h2  {
+	line-height:20px;
+	color:rgb(23,25,230);
+	}
+	
